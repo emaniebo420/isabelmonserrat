@@ -17,17 +17,19 @@ export default function Gallery() {
     onClick={() => setSelected(null)}
   >
     <div className="relative max-w-3xl w-full" onClick={(e) => e.stopPropagation()}>
+      {/* X button inside the image */}
       <button
         onClick={() => setSelected(null)}
-        className="absolute -top-10 right-0 text-white text-3xl hover:opacity-70 w-10 h-10 flex items-center justify-center"
+        className="absolute top-3 right-3 z-10 text-white text-lg font-bold w-8 h-8 rounded-full flex items-center justify-center"
+        style={{ background: 'rgba(0,0,0,0.6)' }}
       >
         ✕
-            </button>
-            <img
-              src={selected.image}
-              alt={selected.title}
-              className="w-full rounded-2xl object-contain max-h-[80vh]"
-            />
+      </button>
+      <img
+        src={selected.image}
+        alt={selected.title}
+        className="w-full rounded-2xl object-contain max-h-[75vh]"
+      />
       <div className="mt-4 text-center text-white">
         <h3 className="text-xl font-bold">{selected.title}</h3>
         <p className="text-gray-400">{selected.medium}</p>
@@ -36,7 +38,6 @@ export default function Gallery() {
     </div>
   </div>
 )}
-
 
       <section className="px-6 py-12">
         <h2 className="text-3xl font-bold text-center mb-2">Gallery</h2>
