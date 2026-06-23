@@ -12,35 +12,31 @@ export default function Gallery() {
       <Navbar active="gallery" />
 
       {selected && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
-          onClick={() => setSelected(null)}
-        >
-          <div className="relative max-w-3xl w-full" onClick={(e) => e.stopPropagation()}>
-            <button
-              onClick={() => setSelected(null)}
-              className="absolute top-2 right-2 text-white text-2xl hover:opacity-70 bg-black bg-opacity-50 rounded-full w-8 h-8 flex items-center justify-center z-10"
-            >
-              ✕
-            </button>
-            <img
-              src={selected.image}
-              alt={selected.title}
-              className="w-full rounded-2xl object-contain max-h-[80vh]"
-            />
-            <div className="mt-4 text-center text-white">
-              <h3 className="text-xl font-bold">{selected.title}</h3>
-              <p className="text-gray-400">{selected.medium}</p>
-              <p className="text-gray-400 text-sm">{selected.year}</p>
-              <a href="/contact"
-                className="mt-4 inline-block px-8 py-3 rounded-full font-medium transition hover:opacity-90"
-                style={{ background: '#c9a84c', color: '#1a1a1a' }}>
-                Inquire About This Piece
-              </a>
-            </div>
-          </div>
-        </div>
-      )}
+  <div
+    className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+    onClick={() => setSelected(null)}
+  >
+    <div className="relative max-w-3xl w-full" onClick={(e) => e.stopPropagation()}>
+      <button
+        onClick={() => setSelected(null)}
+        className="absolute -top-10 right-0 text-white text-3xl hover:opacity-70 w-10 h-10 flex items-center justify-center"
+      >
+        ✕
+      </button>
+      <img
+        src={selected.image}
+        alt={selected.title}
+        className="w-full rounded-2xl object-contain max-h-[75vh]"
+      />
+      <div className="mt-4 text-center text-white">
+        <h3 className="text-xl font-bold">{selected.title}</h3>
+        <p className="text-gray-400">{selected.medium}</p>
+        <p className="text-gray-400 text-sm">{selected.year}</p>
+      </div>
+    </div>
+  </div>
+)}
+
 
       <section className="px-6 py-12">
         <h2 className="text-3xl font-bold text-center mb-2">Gallery</h2>
