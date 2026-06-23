@@ -22,12 +22,12 @@ export default function Gallery() {
         className="absolute -top-10 right-0 text-white text-3xl hover:opacity-70 w-10 h-10 flex items-center justify-center"
       >
         ✕
-      </button>
-      <img
-        src={selected.image}
-        alt={selected.title}
-        className="w-full rounded-2xl object-contain max-h-[75vh]"
-      />
+            </button>
+            <img
+              src={selected.image}
+              alt={selected.title}
+              className="w-full rounded-2xl object-contain max-h-[80vh]"
+            />
       <div className="mt-4 text-center text-white">
         <h3 className="text-xl font-bold">{selected.title}</h3>
         <p className="text-gray-400">{selected.medium}</p>
