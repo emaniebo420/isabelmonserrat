@@ -111,7 +111,7 @@ export default function Home() {
                 <a href="https://www.facebook.com/ACCES.organization" target="_blank"
                   className="font-semibold hover:opacity-70 transition"
                   style={{ color: '#6b1e2e' }}>
-                  Art Capital — Let's Flourish ↗
+                  Art Capital — Let's Flourish 
                 </a>
                 <p className="text-sm" style={{ color: '#6b6b6b' }}>Grand Palais, Paris, France</p>
               </div>
@@ -122,7 +122,7 @@ export default function Home() {
                 <a href="https://www.facebook.com/ACCES.organization" target="_blank"
                   className="font-semibold hover:opacity-70 transition"
                   style={{ color: '#6b1e2e' }}>
-                  United Nations — Let's Flourish ↗
+                  United Nations — Let's Flourish 
                 </a>
                 <p className="text-sm" style={{ color: '#6b6b6b' }}>Vienna, Austria</p>
               </div>
@@ -133,7 +133,7 @@ export default function Home() {
                 <a href="https://vienna101.com/tara-lets-contemporary-filipino-art-exhibit/?fbclid=IwY2xjawLGA9BleHRuA2FlbQIxMQBicmlkETFqRHZXSDVWYklubjRYd09sAR7LFK3B8S-dMiVakTAZuII8APX9nU4S5fg-ogmdStqbxyxLsGcJ2O-nf9F3IQ_aem_OmtXQpyLDQi_M3Aw6Qhymw" target="_blank"
                   className="font-semibold hover:opacity-70 transition"
                   style={{ color: '#6b1e2e' }}>
-                  Tara Let's! Contemporary Filipino Art ↗
+                  Tara Let's! Contemporary Filipino Art 
                 </a>
                 <p className="text-sm" style={{ color: '#6b6b6b' }}>Philippine Embassy, Vienna, Austria</p>
               </div>
