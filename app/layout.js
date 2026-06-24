@@ -12,9 +12,13 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Isabel Monserrat — Filipino Artist | Original Paintings",
-  description: "Original oil paintings, watercolor and commissions by Isabel Monserrat, a Filipino artist from Tagaytay, Philippines. Browse her gallery and shop unique handcrafted artworks.",
-  keywords: "Filipino artist, original paintings, oil painting, watercolor, art commissions, Philippines, Tagaytay, Isabel Monserrat",
+  metadataBase: new URL('https://isabelmonserrat.com'),
+  title: {
+    default: "Isabel Monserrat — Filipino Artist | Original Paintings",
+    template: "%s — Isabel Monserrat",
+  },
+  description: "Original paintings and commissions by Isabel Monserrat, a Filipino artist from Tagaytay, Philippines. Browse her gallery and shop unique handcrafted artworks.",
+  keywords: "Filipino artist, original paintings, paintings, mixed media, oil painting, acrylic painting, art commissions, Philippines, Tagaytay, Metro Manila, Manila, Isabel Monserrat",
   openGraph: {
     title: "Isabel Monserrat — Filipino Artist",
     description: "Original paintings and commissions by Isabel Monserrat, Filipino artist from Tagaytay, Philippines.",
