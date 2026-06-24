@@ -26,7 +26,7 @@ export default function About() {
 
         <div className="space-y-5 text-lg leading-relaxed" style={{ color: '#4a4a4a' }}>
           <p>
-            Isabel Monserrat is a painter and sculptor born in December 1997. A dedicated creator, she completed her Bachelor's degree in Painting at the University of Santo Tomas and is currently pursuing her Master's in Fine Arts there.
+            Isabel Monserrat is a painter and sculptor born in December 1997. A dedicated creator, she completed her Bachelor's degree in Painting at the University of Santo Tomas and currently pursuing her Master's in Fine Arts there.
           </p>
           <p>
             Isabel has participated in over 50 local and international exhibitions, focusing on women often in dreamy themes of nature — embracing imperfections and healing.
