@@ -98,6 +98,7 @@ export default function Home() {
       </section>
 
       {/* Notable exhibitions */}
+      {/* Notable exhibitions */}
       <section className="px-6 py-16 bg-white">
         <FadeIn>
           <p className="text-xs tracking-widest uppercase text-center mb-4" style={{ color: '#c9a84c' }}>
@@ -107,21 +108,33 @@ export default function Home() {
           <div className="max-w-2xl mx-auto space-y-4">
             <div className="flex justify-between items-center border-b pb-4" style={{ borderColor: '#e8e0d5' }}>
               <div>
-                <p className="font-semibold">Art Capital — Let's Flourish</p>
+                <a href="https://www.facebook.com/ACCES.organization" target="_blank"
+                  className="font-semibold hover:opacity-70 transition"
+                  style={{ color: '#6b1e2e' }}>
+                  Art Capital — Let's Flourish ↗
+                </a>
                 <p className="text-sm" style={{ color: '#6b6b6b' }}>Grand Palais, Paris, France</p>
               </div>
               <p className="text-sm font-medium" style={{ color: '#6b1e2e' }}>2026</p>
             </div>
             <div className="flex justify-between items-center border-b pb-4" style={{ borderColor: '#e8e0d5' }}>
               <div>
-                <p className="font-semibold">United Nations — Let's Flourish</p>
+                <a href="https://www.facebook.com/ACCES.organization" target="_blank"
+                  className="font-semibold hover:opacity-70 transition"
+                  style={{ color: '#6b1e2e' }}>
+                  United Nations — Let's Flourish ↗
+                </a>
                 <p className="text-sm" style={{ color: '#6b6b6b' }}>Vienna, Austria</p>
               </div>
               <p className="text-sm font-medium" style={{ color: '#6b1e2e' }}>2026</p>
             </div>
             <div className="flex justify-between items-center">
               <div>
-                <p className="font-semibold">Tara Let's! Contemporary Filipino Art</p>
+                <a href="https://vienna101.com/tara-lets-contemporary-filipino-art-exhibit/?fbclid=IwY2xjawLGA9BleHRuA2FlbQIxMQBicmlkETFqRHZXSDVWYklubjRYd09sAR7LFK3B8S-dMiVakTAZuII8APX9nU4S5fg-ogmdStqbxyxLsGcJ2O-nf9F3IQ_aem_OmtXQpyLDQi_M3Aw6Qhymw" target="_blank"
+                  className="font-semibold hover:opacity-70 transition"
+                  style={{ color: '#6b1e2e' }}>
+                  Tara Let's! Contemporary Filipino Art ↗
+                </a>
                 <p className="text-sm" style={{ color: '#6b6b6b' }}>Philippine Embassy, Vienna, Austria</p>
               </div>
               <p className="text-sm font-medium" style={{ color: '#6b1e2e' }}>2025</p>
