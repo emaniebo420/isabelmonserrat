@@ -27,7 +27,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://isabelmonserrat.com/images/art1.jpg",
+        url: "https://isabelmonserrat.com/images/art1.webp",
         width: 800,
         height: 600,
         alt: "Oasis — Oil on Canvas by Isabel Monserrat",

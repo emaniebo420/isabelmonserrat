@@ -78,7 +78,7 @@ export default function Home() {
           <h2 className="text-2xl font-bold text-center mb-10">Oasis, 2024</h2>
           <div className="max-w-sm mx-auto rounded-2xl overflow-hidden shadow-lg">
             <img
-              src="/images/art1.jpg"
+              src="/images/art1.webp"
               alt="Oasis by Isabel Monserrat"
               className="w-full object-contain"
               style={{ background: '#faf7f2' }}
