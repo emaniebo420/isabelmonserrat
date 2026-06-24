@@ -158,7 +158,7 @@ export default function Contact() {
                 <p>— Custom portraits & landscapes</p>
                 <p>— Mixed media & oil paintings</p>
                 <p>— Turnaround time varies by size</p>
-                <p>— Ships nationwide across the Philippines</p>
+                <p>— Ships locally and internationally</p>
               </div>
             </div>
 

@@ -45,23 +45,29 @@ export default function Gallery() {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {artworks.map((art) => (
             <div key={art.id}
-              className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition cursor-pointer flex flex-col"
-              onClick={() => setSelected(art)}
-            >
-              <div className="w-full bg-gray-50" style={{ aspectRatio: '3/4' }}>
-                <img
-                  src={art.image}
-                  alt={art.title}
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <div className="p-3 md:p-4 flex flex-col flex-1">
-                <h3 className="font-semibold text-sm md:text-base">{art.title}</h3>
-                <p className="text-xs md:text-sm truncate" style={{ color: '#6b6b6b' }}>{art.medium}</p>
-                <p className="text-xs" style={{ color: '#6b6b6b' }}>{art.size}</p>
-                <p className="text-xs mt-1" style={{ color: '#c9a84c' }}>{art.year}</p>
-              </div>
+            className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition cursor-pointer flex flex-col"
+            onClick={() => setSelected(art)}
+          >
+            <div className="w-full bg-gray-50 relative" style={{ aspectRatio: '3/4' }}>
+              <img
+                src={art.image}
+                alt={art.title}
+                className="w-full h-full object-contain"
+              />
+              {!art.available && (
+                <div className="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-medium text-white"
+                  style={{ background: '#6b1e2e' }}>
+                  Sold
+                </div>
+              )}
             </div>
+            <div className="p-3 md:p-4 flex flex-col flex-1">
+              <h3 className="font-semibold text-sm md:text-base">{art.title}</h3>
+              <p className="text-xs md:text-sm truncate" style={{ color: '#6b6b6b' }}>{art.medium}</p>
+              <p className="text-xs" style={{ color: '#6b6b6b' }}>{art.size}</p>
+              <p className="text-xs mt-1" style={{ color: '#c9a84c' }}>{art.year}</p>
+            </div>
+          </div>
           ))}
         </div>
       </section>

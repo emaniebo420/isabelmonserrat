@@ -54,9 +54,9 @@ export default function Home() {
           </FadeIn>
           <FadeIn>
             <div className="text-center p-6 rounded-2xl border" style={{ background: '#faf7f2', borderColor: '#e8e0d5' }}>
-              <p className="text-xs tracking-widest uppercase mb-3" style={{ color: '#c9a84c' }}>Nationwide</p>
-              <p className="font-semibold mb-1">Ships Across the PH</p>
-              <p className="text-sm" style={{ color: '#6b6b6b' }}>Carefully packed and delivered safely to your door.</p>
+              <p className="text-xs tracking-widest uppercase mb-3" style={{ color: '#c9a84c' }}>Worldwide</p>
+              <p className="font-semibold mb-1">Ships Internationally</p>
+              <p className="text-sm" style={{ color: '#6b6b6b' }}>Carefully packed and delivered worldwide.</p>
             </div>
           </FadeIn>
           <FadeIn>

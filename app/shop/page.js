@@ -7,7 +7,7 @@ import artworks from '@/data/artworks';
 import BackToTop from '@/components/BackToTop';
 
 export default function Shop() {
-  const available = artworks.filter((art) => art.available);
+  const available = artworks;
   const [selected, setSelected] = useState(null);
   const router = useRouter();
 
@@ -37,12 +37,14 @@ export default function Shop() {
               <p className="text-gray-400">{selected.medium}</p>
               <p className="text-gray-400 text-sm">{selected.size}</p>
               <p className="text-gray-400 text-sm">{selected.year}</p>
-              <button
-                onClick={() => router.push('/contact')}
-                className="mt-4 inline-block px-8 py-3 rounded-full font-medium transition hover:opacity-90"
-                style={{ background: '#c9a84c', color: '#1a1a1a' }}>
-                Inquire About This Piece
-              </button>
+              {selected.available && (
+                <button
+                  onClick={() => router.push('/contact')}
+                  className="mt-4 inline-block px-8 py-3 rounded-full font-medium transition hover:opacity-90"
+                  style={{ background: '#c9a84c', color: '#1a1a1a' }}>
+                  Inquire About This Piece
+                </button>
+              )}
             </div>
           </div>
         </div>
@@ -57,28 +59,42 @@ export default function Shop() {
               className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition cursor-pointer flex flex-col"
               onClick={() => setSelected(product)}
             >
-              {/* Fixed aspect ratio container */}
-              <div className="w-full bg-gray-50" style={{ aspectRatio: '3/4' }}>
+              <div className="w-full bg-gray-50 relative" style={{ aspectRatio: '3/4' }}>
                 <img
                   src={product.image}
                   alt={product.title}
                   className="w-full h-full object-contain"
                 />
+                {!product.available && (
+                  <div className="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-medium text-white"
+                    style={{ background: '#6b1e2e' }}>
+                    Sold
+                  </div>
+                )}
               </div>
               <div className="p-3 md:p-4 flex flex-col flex-1">
                 <h3 className="font-semibold text-sm md:text-base">{product.title}</h3>
                 <p className="text-xs md:text-sm truncate" style={{ color: '#6b6b6b' }}>{product.medium}</p>
                 <p className="text-xs" style={{ color: '#6b6b6b' }}>{product.size}</p>
                 <p className="text-xs mt-1" style={{ color: '#c9a84c' }}>{product.year}</p>
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    router.push('/contact');
-                  }}
-                  className="mt-3 w-full text-white py-2 rounded-full transition hover:opacity-90 font-medium text-sm"
-                  style={{ background: '#6b1e2e' }}>
-                  Inquire
-                </button>
+                {product.available ? (
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      router.push('/contact');
+                    }}
+                    className="mt-3 w-full text-white py-2 rounded-full transition hover:opacity-90 font-medium text-sm"
+                    style={{ background: '#6b1e2e' }}>
+                    Inquire
+                  </button>
+                ) : (
+                  <button
+                    disabled
+                    className="mt-3 w-full py-2 rounded-full font-medium text-sm cursor-not-allowed"
+                    style={{ background: '#e8e0d5', color: '#6b6b6b' }}>
+                    Sold
+                  </button>
+                )}
               </div>
             </div>
           ))}
