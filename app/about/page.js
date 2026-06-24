@@ -32,7 +32,7 @@ export default function About() {
             Isabel has participated in over 50 local and international exhibitions, focusing on women often in dreamy themes of nature — embracing imperfections and healing.
           </p>
           <p>
-            Her work invites the viewer into a world where femininity, nature, and emotion intertwine — each brushstroke a quiet act of courage, each piece a conversation between the self and the sacred.
+            My work invites the viewer into a world where femininity, nature, and emotion intertwine — each brushstroke a quiet act of courage, each piece a conversation between the self and the sacred.
           </p>
         </div>
 
