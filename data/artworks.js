@@ -5,7 +5,7 @@ const artworks = [
     year: "2024",
     medium: "Oil on Canvas",
     size: "24 x 36 inches",
-    image: "/images/art1.jpg",
+    image: "/images/art1.webp",
     available: true,
   },
   {
@@ -14,7 +14,7 @@ const artworks = [
     year: "2024",
     medium: "Mixed media (Oil, acrylic, foil and spray paint, plastic foam, modeling paste, acrylic flat beads, chipboard)",
     size: "24 x 36 inches",
-    image: "/images/art2.jpg",
+    image: "/images/art2.webp",
     available: true,
   },
   {
@@ -23,7 +23,7 @@ const artworks = [
     year: "2026",
     medium: "Oil and acrylic on Canvas",
     size: "12x12 inches",
-    image: "/images/art3.jpg",
+    image: "/images/art3.webp",
     available: true,
   },
   {
@@ -32,7 +32,7 @@ const artworks = [
     year: "2023",
     medium: "Acrylic on Canvas",
     size: "20 x 22 inches",
-    image: "/images/art4.jpg",
+    image: "/images/art4.webp",
     available: true,
   },
   {
@@ -41,7 +41,7 @@ const artworks = [
     year: "2023",
     medium: "Mixed media on Canvas (Oil, acrylic and textures)",
     size: "47 x 34.5 inches",
-    image: "/images/art5.jpg",
+    image: "/images/art5.webp",
     available: true,
   },
   {
@@ -50,7 +50,7 @@ const artworks = [
     year: "2024",
     medium: "Mixed media on box type Canvas (Oil, acrylic paint, modeling paste, Canvas cloth, glitter varnish and flat beads)",
     size: "48 x 60 inches",
-    image: "/images/art6.jpg",
+    image: "/images/art6.webp",
     available: true,
   },
   {
@@ -59,7 +59,7 @@ const artworks = [
     year: "2023",
     medium: "Mixed media on Canvas",
     size: "24 x 36 inches",
-    image: "/images/art7.jpg",
+    image: "/images/art7.webp",
     available: true,
   },
   {
@@ -68,7 +68,7 @@ const artworks = [
     year: "2023",
     medium: "Oil and acrylic on Canvas",
     size: "24 x 36 inches",
-    image: "/images/art8.jpg",
+    image: "/images/art8.webp",
     available: true,
   },
   {
@@ -77,7 +77,7 @@ const artworks = [
     year: "2024",
     medium: "Mixed Media on Canvas (Acrylic paint, Acrylic markers, Oil paint, Modeling paste, Plastic texture, Flat beads, Spray paint)",
     size: "36 x 48 inches",
-    image: "/images/art9.jpg",
+    image: "/images/art9.webp",
     available: true,
   },
   {
@@ -86,7 +86,7 @@ const artworks = [
     year: "2023",
     medium: "Mixed media on Canvas",
     size: "36 x 48 inches",
-    image: "/images/art10.jpg",
+    image: "/images/art10.webp",
     available: true,
   },
   {
@@ -95,7 +95,7 @@ const artworks = [
     year: "2024",
     medium: "Mixed Media on Canvas (Acrylic paint, Acrylic markers, Oil paint, Modeling paste, Plastic texture, Flat beads, Spray paint)",
     size: "28 x 40 inches",
-    image: "/images/art11.jpg",
+    image: "/images/art11.webp",
     available: true,
   },
   {
@@ -104,7 +104,7 @@ const artworks = [
     year: "2022",
     medium: "Mixed media on repurposed wood (Oil, acrylic, textures and sticker)",
     size: "36 x 36 inches",
-    image: "/images/art12.jpg",
+    image: "/images/art12.webp",
     available: true,
   },
   {
@@ -113,7 +113,7 @@ const artworks = [
     medium: "Mixed media (acrylic, airdry clay, clay varnish, spray paint, beads)",
     size: "19 x 25 inches",
     year: "2024",
-    image: "/images/art13.jpg",
+    image: "/images/art13.webp",
     available: true,
   },
   {
@@ -122,7 +122,7 @@ const artworks = [
     medium: "Oil and acrylic on Canvas. Frames sculpted with epoxy.",
     size: "24 x 36 inches",
     year: "2025",
-    image: "/images/art14.jpg",
+    image: "/images/art14.webp",
     available: false,
   },
   {
@@ -131,7 +131,7 @@ const artworks = [
     medium: "Mixed media (oil, acrylic and glitter varnish)",
     size: "24 x 36 inches",
     year: "2024",
-    image: "/images/art15.jpg",
+    image: "/images/art15.webp",
     available: true,
   },
   {
@@ -140,7 +140,7 @@ const artworks = [
     medium: "Oil and acrylic on Canvas",
     size: "18 x 24 inches",
     year: "2025",
-    image: "/images/art16.jpg",
+    image: "/images/art16.webp",
     available: true,
   },
   {
@@ -149,7 +149,7 @@ const artworks = [
     medium: "Oil and acrylic on Canvas",
     size: "24 x 36 inches",
     year: "2025",
-    image: "/images/art17.jpg",
+    image: "/images/art17.webp",
     available: true,
   },
   {
@@ -158,7 +158,7 @@ const artworks = [
     medium: "Mixed media on Canvas",
     size: "24 x 36 inches",
     year: "2023",
-    image: "/images/art18.jpg",
+    image: "/images/art18.webp",
     available: false,
   },
   {
@@ -167,7 +167,7 @@ const artworks = [
     medium: "Mixed media on repurposed wood",
     size: "36 × 36 inches ",
     year: "2022",
-    image: "/images/art19.jpg",
+    image: "/images/art19.webp",
     available: true,
   },
   {
@@ -176,7 +176,7 @@ const artworks = [
     medium: "Mixed media on repurposed wood",
     size: "36 × 36 inches ",
     year: "2022",
-    image: "/images/art20.jpg",
+    image: "/images/art20.webp",
     available: true,
   },
   {
@@ -185,7 +185,7 @@ const artworks = [
     medium: "Mixed media on Canvas",
     size: "10.24 x 14.96 inches ",
     year: "2022",
-    image: "/images/art21.jpg",
+    image: "/images/art21.webp",
     available: false,
   },
   {
@@ -194,7 +194,7 @@ const artworks = [
     medium: "Oil in Panel",
     size: "25.59 x 33.46 inches",
     year: "2015",
-    image: "/images/art22.jpg",
+    image: "/images/art22.webp",
     available: true,
   },
   {
@@ -203,7 +203,7 @@ const artworks = [
     medium: "Oil on Canvas",
     size: "20 x 30 inches",
     year: "2020",
-    image: "/images/art23.jpg",
+    image: "/images/art23.webp",
     available: true,
   },
   {
@@ -212,7 +212,7 @@ const artworks = [
     medium: "Mixed media on Canvas",
     size: "36 x 36 inches",
     year: "2023",
-    image: "/images/art24.jpg",
+    image: "/images/art24.webp",
     available: false,
   },
   {
@@ -221,7 +221,7 @@ const artworks = [
     medium: "Mixed media on Canvas",
     size: "36 x 48 inches",
     year: "2019",
-    image: "/images/art25.jpg",
+    image: "/images/art25.webp",
     available: false,
   },
   {
@@ -230,7 +230,7 @@ const artworks = [
     medium: "Mixed media on Canvas",
     size: "36 x 36 inches",
     year: "2024",
-    image: "/images/art26.jpg",
+    image: "/images/art26.webp",
     available: false,
   },
   {
@@ -239,7 +239,7 @@ const artworks = [
     medium: "Mixed media on box type Canvas (Oil, Acrylic, Modeling Paste, Plastic Textures, Acrylic ",
     size: "12 x 12 inches",
     year: "2024",
-    image: "/images/art27.jpg",
+    image: "/images/art27.webp",
     available: true,
   },
   {
@@ -248,7 +248,7 @@ const artworks = [
     medium: "Mixed media (Oil and acrylic on Canvas)",
     size: "16.73 x 20.47 inches",
     year: "2024",
-    image: "/images/art28.jpg",
+    image: "/images/art28.webp",
     available: true,
   },
   {
@@ -257,7 +257,7 @@ const artworks = [
     medium: "Mixed media",
     size: "18 x 24 inches",
     year: "2018",
-    image: "/images/art29.jpg",
+    image: "/images/art29.webp",
     available: true,
   },
   {
@@ -266,7 +266,7 @@ const artworks = [
     medium: "Mixed media on Canvas",
     size: "12 x 12 inches",
     year: "2024",
-    image: "/images/art30.jpg",
+    image: "/images/art30.webp",
     available: true,
   }
 
@@ -287,7 +287,7 @@ const artworks = [
   //   title: "Painting Title",
   //   medium: "Watercolor",
   //   year: "2025",
-  //   image: "/images/art2.jpg",
+  //   image: "/images/art2.webp",
   //   available: true,
   // },
 ];
