@@ -107,7 +107,7 @@ export default function Home() {
           <div className="max-w-2xl mx-auto space-y-4">
             <div className="flex justify-between items-center border-b pb-4" style={{ borderColor: '#e8e0d5' }}>
               <div>
-                <a href="https://www.facebook.com/ACCES.organization" target="_blank"
+                <a href="https://www.facebook.com/ACCES.organization/posts/pfbid0sM61zynJE2bEqUzj2dSfkRhPxwheBAFBdpCaD1wKuwpb6ceP93c1hktq5YgnmQDbl" target="_blank"
                   className="font-semibold transition hover:opacity-70 underline underline-offset-2"
                   style={{ color: '#c9a84c' }}>
                   Art Capital — Let's Flourish
