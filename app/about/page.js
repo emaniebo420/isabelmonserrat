@@ -69,6 +69,17 @@ export default function About() {
             <div className="space-y-4">
               <div className="flex justify-between items-center border-b pb-4" style={{ borderColor: '#e8e0d5' }}>
                 <div>
+                  <a href="https://www.facebook.com/pugadniart/posts/%F0%9D%90%8F%F0%9D%90%AE%F0%9D%90%A0%F0%9D%90%9A%F0%9D%90%9D-%F0%9D%90%A7%F0%9D%90%A2-%F0%9D%90%80%F0%9D%90%AB%F0%9D%90%AD-%F0%9D%90%92%F0%9D%90%AD%F0%9D%90%AE%F0%9D%90%9D%F0%9D%90%A2%F0%9D%90%A8-%F0%9D%90%8F%F0%9D%90%AB%F0%9D%90%9E%F0%9D%90%AC%F0%9D%90%9E%F0%9D%90%A7%F0%9D%90%AD%F0%9D%90%AC-%F0%9D%90%8C%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%A4%F0%9D%90%9A%F0%9D%90%A4%F0%9D%90%9A%F0%9D%90%A2%F0%9D%90%AD-%F0%9D%90%85%F0%9D%90%91%F0%9D%90%88%F0%9D%90%84%F0%9D%90%8D%F0%9D%90%83%F0%9D%90%92%F0%9D%90%87%F0%9D%90%88%F0%9D%90%8F-%F0%9D%9F%90%F0%9D%9F%8E%F0%9D%9F%90%F0%9D%9F%94-%F0%9D%90%85%F0%9D%90%9E%F0%9D%90%9A%F0%9D%90%AD%F0%9D%90%AE%F0%9D%90%AB%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%A0-%F0%9D%90%88%F0%9D%90%92%F0%9D%90%80%F0%9D%90%81%F0%9D%90%84%F0%9D%90%8B-%F0%9D%90%8C%F0%9D%90%8E%F0%9D%90%8D%F0%9D%90%92%F0%9D%90%84%F0%9D%90%91%F0%9D%90%91%F0%9D%90%80/1470766788427433/" target="_blank"
+                    className="font-semibold transition hover:opacity-70 underline underline-offset-2"
+                    style={{ color: '#6b1e2e' }}>
+                    Pugad ni Art Studio: Mankakait — Friendship
+                  </a>
+                  <p className="text-sm" style={{ color: '#6b6b6b' }}>Baguio, Philippines</p>
+                </div>
+                <p className="text-sm font-medium" style={{ color: '#6b1e2e' }}>2026</p>
+              </div>
+              <div className="flex justify-between items-center border-b pb-4" style={{ borderColor: '#e8e0d5' }}>
+                <div>
                   <a href="https://www.facebook.com/ACCES.organization" target="_blank"
                     className="font-semibold transition hover:opacity-70 underline underline-offset-2"
                     style={{ color: '#6b1e2e' }}>
