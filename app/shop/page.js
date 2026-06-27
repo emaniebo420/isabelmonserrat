@@ -51,54 +51,54 @@ export default function Shop() {
       )}
 
       <section className="px-6 py-12">
-        <h2 className="text-3xl font-bold text-center mb-2">Shop</h2>
-        <p className="text-center mb-10" style={{ color: '#6b6b6b' }}>Own a piece of original art</p>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
-          {available.map((product) => (
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+      {available.map((product) => (
             <div key={product.id}
-              className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition cursor-pointer flex flex-col"
-              onClick={() => setSelected(product)}
-            >
-              <div className="w-full bg-gray-50 relative" style={{ aspectRatio: '3/4' }}>
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  className="w-full h-full object-contain"
-                />
-                {!product.available && (
-                  <div className="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-medium text-white"
-                    style={{ background: '#6b1e2e' }}>
-                    Sold
-                  </div>
-                )}
-              </div>
-              <div className="p-3 md:p-4 flex flex-col flex-1">
-                <h3 className="font-semibold text-sm md:text-base">{product.title}</h3>
-                <p className="text-xs md:text-sm truncate" style={{ color: '#6b6b6b' }}>{product.medium}</p>
-                <p className="text-xs" style={{ color: '#6b6b6b' }}>{product.size}</p>
-                <p className="text-xs mt-1" style={{ color: '#c9a84c' }}>{product.year}</p>
-                {product.available ? (
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      router.push('/contact');
-                    }}
-                    className="mt-3 w-full text-white py-2 rounded-full transition hover:opacity-90 font-medium text-sm"
-                    style={{ background: '#6b1e2e' }}>
-                    Inquire
-                  </button>
-                ) : (
-                  <button
-                    disabled
-                    className="mt-3 w-full py-2 rounded-full font-medium text-sm cursor-not-allowed"
-                    style={{ background: '#e8e0d5', color: '#6b6b6b' }}>
-                    Sold
-                  </button>
-                )}
-              </div>
-            </div>
-          ))}
+      className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition cursor-pointer flex flex-col"
+      onClick={() => setSelected(product)}
+    >
+          <div className="w-full bg-gray-50 relative" style={{ aspectRatio: '3/4' }}>
+          <img
+            src={product.image}
+            alt={product.title}
+            className="absolute inset-0 w-full h-full object-contain"
+          />
+        {!product.available && (
+          <div className="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-medium text-white"
+            style={{ background: '#6b1e2e' }}>
+            Sold
+          </div>
+        )}
+      </div>
+      <div className="p-3 md:p-4 flex flex-col flex-1">
+        <h3 className="font-semibold text-sm md:text-base line-clamp-2">{product.title}</h3>
+        <p className="text-xs md:text-sm truncate" style={{ color: '#6b6b6b' }}>{product.medium}</p>
+        <p className="text-xs" style={{ color: '#6b6b6b' }}>{product.size}</p>
+        <p className="text-xs mt-1" style={{ color: '#c9a84c' }}>{product.year}</p>
+        <div className="mt-auto pt-3">
+          {product.available ? (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                router.push('/contact');
+              }}
+              className="w-full text-white py-2 rounded-full transition hover:opacity-90 font-medium text-sm"
+              style={{ background: '#6b1e2e' }}>
+              Inquire
+            </button>
+          ) : (
+            <button
+              disabled
+              className="w-full py-2 rounded-full font-medium text-sm cursor-not-allowed"
+              style={{ background: '#e8e0d5', color: '#6b6b6b' }}>
+              Sold
+            </button>
+          )}
         </div>
+      </div>
+    </div>
+      ))}
+    </div>
       </section>
 
       <section className="px-6 py-12 text-center" style={{ background: '#faf7f2' }}>

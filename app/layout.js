@@ -13,6 +13,9 @@ const inter = Inter({
 
 export const metadata = {
   metadataBase: new URL('https://isabelmonserrat.com'),
+  verification: {
+  google: 's8Uhm9uVJKY8yQ9F7RxDWnICWYRZlLaxo_iq6C126gA',
+},
   title: {
     default: "Isabel Monserrat — Filipino Artist | Original Paintings",
     template: "%s — Isabel Monserrat",
