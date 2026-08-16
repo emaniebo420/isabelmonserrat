@@ -11,16 +11,38 @@
   --gold: #c9a84c;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--cream);
   color: var(--foreground);
+}
+
+::selection {
+  background: rgba(107, 30, 46, 0.15);
+  color: #6b1e2e;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #faf7f2;
+}
+::-webkit-scrollbar-thumb {
+  background: #e8e0d5;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c9a84c;
 }
 
 h1, h2, h3 {
   font-family: var(--font-playfair);
 }
 
-/* Scroll animations */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
@@ -44,4 +66,3 @@ h1, h2, h3 {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
-

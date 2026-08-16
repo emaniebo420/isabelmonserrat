@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="flex justify-center gap-6 mt-4">
         
         {/* Facebook */}
-        <a href="https://facebook.com/isabelmonserrat14" target="_blank"
+        <a href="https://facebook.com/isabelmonserrat14" target="_blank" rel="noopener noreferrer"
           className="transition hover:opacity-70"
           style={{ color: '#6b1e2e' }}>
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
@@ -18,7 +18,7 @@ export default function Footer() {
         </a>
 
         {/* Instagram */}
-        <a href="https://instagram.com/lebasimonserrat" target="_blank"
+        <a href="https://instagram.com/lebasimonserrat" target="_blank" rel="noopener noreferrer"
           className="transition hover:opacity-70"
           style={{ color: '#6b1e2e' }}>
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
