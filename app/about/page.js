@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import BackToTop from '@/components/BackToTop';
 import Link from 'next/link';
 
 export default function About() {
@@ -24,15 +25,22 @@ export default function About() {
           Painter · Sculptor · Storyteller
         </p>
 
+        {/* Pull Quote */}
+        <div className="mb-10 border-l-4 pl-6 py-1" style={{ borderColor: '#c9a84c' }}>
+          <p className="text-xl italic leading-relaxed" style={{ color: '#6b1e2e' }}>
+            "I want my art to be able to heal the soul with themes of mental health awareness, beauty, and nature."
+          </p>
+        </div>
+
         <div className="space-y-5 text-lg leading-relaxed" style={{ color: '#4a4a4a' }}>
           <p>
-            Isabel Monserrat is a painter and sculptor born in December 1997. A dedicated creator, she completed her Bachelor's degree in Painting at the University of Santo Tomas and currently pursuing her Master's in Fine Arts there.
+            Isabel Monserrat (b. 1997) is a Filipino painter and sculptor whose practice explores the intersections of femininity, nature, memory, and emotional healing. She holds a Bachelor of Fine Arts in Painting from the University of Santo Tomas, where she is currently completing her Master of Fine Arts.
           </p>
           <p>
-            Isabel has participated in over 50 local and international exhibitions, focusing on women often in dreamy themes of nature — embracing imperfections and healing.
+            With over 50 local and international exhibitions to her name, Isabel has established herself as one of the more compelling voices in contemporary Filipino art. Her work unfolds in dream-like narratives that celebrate womanhood, vulnerability, and transformation — building spaces where beauty and imperfection coexist, and where the resilience of the human experience is rendered through organic forms, symbolic imagery, and layered visual storytelling.
           </p>
           <p>
-            My work invites the viewer into a world where femininity, nature, and emotion intertwine — each brushstroke a quiet act of courage, each piece a conversation between the self and the sacred.
+            Her art came from healing and self-discovery. Each piece is at once a personal confession and an open invitation — drawing the viewer into poetic worlds where emotion meets the natural, and where feeling is given form. It is work that prompts reflection, fosters connection, and quietly insists on empowerment.
           </p>
         </div>
 
@@ -61,6 +69,21 @@ export default function About() {
             </div>
           </div>
 
+          {/* Mediums & Techniques */}
+          <div className="mb-12">
+            <p className="text-xs tracking-widest uppercase mb-6 text-center" style={{ color: '#c9a84c' }}>
+              Mediums &amp; Techniques
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {['Oil on Canvas', 'Acrylic', 'Mixed Media', 'Modeling Paste', 'Epoxy Sculpture', 'Repurposed Wood', 'Spray Paint', 'Glitter Varnish'].map((m) => (
+                <span key={m} className="px-4 py-2 rounded-full text-sm border"
+                  style={{ background: '#fff', borderColor: '#e8e0d5', color: '#4a4a4a' }}>
+                  {m}
+                </span>
+              ))}
+            </div>
+          </div>
+
           {/* Notable Exhibitions */}
           <div className="rounded-2xl p-8 border mb-12" style={{ background: '#ffffff', borderColor: '#e8e0d5' }}>
             <p className="text-xs tracking-widest uppercase mb-6 text-center" style={{ color: '#c9a84c' }}>
@@ -69,7 +92,7 @@ export default function About() {
             <div className="space-y-4">
               <div className="flex justify-between items-center border-b pb-4" style={{ borderColor: '#e8e0d5' }}>
                 <div>
-                  <a href="https://www.facebook.com/pugadniart/posts/1470766788427433/" target="_blank"
+                  <a href="https://www.facebook.com/pugadniart/posts/1470766788427433/" target="_blank" rel="noopener noreferrer"
                     className="font-semibold transition hover:opacity-70 underline underline-offset-2"
                     style={{ color: '#6b1e2e' }}>
                     Pugad ni Art Studio: Mankakait — Friendship
@@ -80,7 +103,7 @@ export default function About() {
               </div>
               <div className="flex justify-between items-center border-b pb-4" style={{ borderColor: '#e8e0d5' }}>
                 <div>
-                  <a href="https://www.facebook.com/ACCES.organization/posts/pfbid0sM61zynJE2bEqUzj2dSfkRhPxwheBAFBdpCaD1wKuwpb6ceP93c1hktq5YgnmQDbl" target="_blank"
+                  <a href="https://www.facebook.com/ACCES.organization/posts/pfbid0sM61zynJE2bEqUzj2dSfkRhPxwheBAFBdpCaD1wKuwpb6ceP93c1hktq5YgnmQDbl" target="_blank" rel="noopener noreferrer"
                     className="font-semibold transition hover:opacity-70 underline underline-offset-2"
                     style={{ color: '#6b1e2e' }}>
                     Art Capital — Let's Flourish
@@ -91,7 +114,7 @@ export default function About() {
               </div>
               <div className="flex justify-between items-center border-b pb-4" style={{ borderColor: '#e8e0d5' }}>
                 <div>
-                  <a href="https://www.facebook.com/ACCES.organization" target="_blank"
+                  <a href="https://www.facebook.com/ACCES.organization" target="_blank" rel="noopener noreferrer"
                     className="font-semibold transition hover:opacity-70 underline underline-offset-2"
                     style={{ color: '#6b1e2e' }}>
                     United Nations — Let's Flourish
@@ -102,7 +125,7 @@ export default function About() {
               </div>
               <div className="flex justify-between items-center border-b pb-4" style={{ borderColor: '#e8e0d5' }}>
                 <div>
-                  <a href="https://vienna101.com/tara-lets-contemporary-filipino-art-exhibit/?fbclid=IwY2xjawLGA9BleHRuA2FlbQIxMQBicmlkETFqRHZXSDVWYklubjRYd09sAR7LFK3B8S-dMiVakTAZuII8APX9nU4S5fg-ogmdStqbxyxLsGcJ2O-nf9F3IQ_aem_OmtXQpyLDQi_M3Aw6Qhymw" target="_blank"
+                  <a href="https://vienna101.com/tara-lets-contemporary-filipino-art-exhibit/?fbclid=IwY2xjawLGA9BleHRuA2FlbQIxMQBicmlkETFqRHZXSDVWYklubjRYd09sAR7LFK3B8S-dMiVakTAZuII8APX9nU4S5fg-ogmdStqbxyxLsGcJ2O-nf9F3IQ_aem_OmtXQpyLDQi_M3Aw6Qhymw" target="_blank" rel="noopener noreferrer"
                     className="font-semibold transition hover:opacity-70 underline underline-offset-2"
                     style={{ color: '#6b1e2e' }}>
                     Tara Let's! Contemporary Filipino Art
@@ -122,6 +145,7 @@ export default function About() {
           </div>
       </section>
 
+      <BackToTop />
       <Footer />
     </main>
   );

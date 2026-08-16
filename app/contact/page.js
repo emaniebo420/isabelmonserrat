@@ -133,7 +133,7 @@ export default function Contact() {
                 Social Media
               </p>
               <div className="space-y-3">
-                <a href="https://facebook.com/isabelmonserrat14" target="_blank"
+                <a href="https://facebook.com/isabelmonserrat14" target="_blank" rel="noopener noreferrer"
                   className="flex items-center gap-3 text-sm transition hover:opacity-70"
                   style={{ color: '#1a1a1a' }}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
@@ -141,7 +141,7 @@ export default function Contact() {
                   </svg>
                   /isabelmonserrat14
                 </a>
-                <a href="https://instagram.com/lebasimonserrat" target="_blank"
+                <a href="https://instagram.com/lebasimonserrat" target="_blank" rel="noopener noreferrer"
                   className="flex items-center gap-3 text-sm transition hover:opacity-70"
                   style={{ color: '#1a1a1a' }}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
