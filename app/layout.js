@@ -21,7 +21,7 @@ export const metadata = {
     default: "Isabel Monserrat — Filipino Artist | Original Paintings",
     template: "%s — Isabel Monserrat",
   },
-  description: "Original paintings and commissions by Isabel Monserrat, a Filipino artist from Tagaytay, Philippines. Browse her gallery and shop unique handcrafted artworks.",
+  description: "Original paintings and commissions by Isabel Monserrat, a Filipino-Spanish contemporary artist based in Tagaytay, Philippines. Explore her gallery and discover unique, handcrafted artworks.",
   keywords: "Filipino artist, original paintings, paintings, mixed media, oil painting, acrylic painting, art commissions, Philippines, Tagaytay, Metro Manila, Manila, Isabel Monserrat",
   openGraph: {
     title: "Isabel Monserrat — Filipino Artist",
