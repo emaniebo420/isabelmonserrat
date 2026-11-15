@@ -34,7 +34,7 @@ export default function About() {
 
         <div className="space-y-5 text-lg leading-relaxed" style={{ color: '#4a4a4a' }}>
           <p>
-            Isabel Monserrat (b. 1997) is a Filipino painter and sculptor whose practice explores the intersections of femininity, nature, memory, and emotional healing. She holds a Bachelor of Fine Arts in Painting from the University of Santo Tomas, where she is currently completing her Master of Fine Arts.
+            Isabel Monserrat (b. 1997) is a Filipino-Spanish painter and sculptor whose practice explores the intersections of femininity, nature, memory, and emotional healing. She holds a Bachelor of Fine Arts in Painting from the University of Santo Tomas, where she is currently completing her Master of Fine Arts.
           </p>
           <p>
             With over 50 local and international exhibitions to her name, Isabel has established herself as one of the more compelling voices in contemporary Filipino art. Her work unfolds in dream-like narratives that celebrate womanhood, vulnerability, and transformation building spaces where beauty and imperfection coexist, and where the resilience of the human experience is rendered through organic forms, symbolic imagery, and layered visual storytelling.
