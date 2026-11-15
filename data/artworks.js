@@ -259,6 +259,15 @@ const artworks = [
     year: "2024",
     image: "/images/art30.webp",
     available: true,
+  },
+  {
+    id: 31,
+    title: "Geese",
+    year: "2026",
+    medium: "Mixed media on canvas (oil, acrylic, air dry clay, epoxy, rhinestones)",
+    size: "13 x 16 inches",
+    image: "/images/art31.webp",
+    available: true,
   }
 
 
