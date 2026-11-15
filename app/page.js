@@ -26,7 +26,7 @@ export default function Home() {
                 Art That Speaks<br />to the Soul
               </h1>
               <p className="text-base md:text-lg mb-10" style={{ color: '#6b6b6b' }}>
-                Original paintings and commissions by a Filipino artist — rooted in femininity, nature, and healing.
+                Original paintings and commissions by a Filipino artist rooted in femininity, nature, and healing.
               </p>
               <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center">
                 <Link href="/gallery"
