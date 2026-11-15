@@ -292,4 +292,9 @@ const artworks = [
   // },
 ];
 
-export default artworks;
+// Newest year first; works from the same year keep newest-added first.
+const sorted = [...artworks].sort(
+  (a, b) => Number(b.year) - Number(a.year) || b.id - a.id
+);
+
+export default sorted;
