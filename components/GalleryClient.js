@@ -1,5 +1,5 @@
 'use client';
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useRef } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import artworks from '@/data/artworks';
@@ -10,6 +10,7 @@ const FILTERS = ['All', 'Available', 'Sold'];
 export default function Gallery() {
   const [selected, setSelected] = useState(null);
   const [filter, setFilter] = useState('All');
+  const touchStart = useRef(null);
 
   const filtered = useMemo(() => artworks.filter((art) => {
     if (filter === 'Available') return art.available;
@@ -31,6 +32,24 @@ export default function Gallery() {
     setSelected(filtered[(selectedIndex + 1) % filtered.length]);
   };
 
+  const onTouchStart = (e) => {
+    const t = e.touches[0];
+    touchStart.current = { x: t.clientX, y: t.clientY };
+  };
+
+  const onTouchEnd = (e) => {
+    const start = touchStart.current;
+    touchStart.current = null;
+    if (!start || selectedIndex < 0 || filtered.length < 2) return;
+    const t = e.changedTouches[0];
+    const dx = t.clientX - start.x;
+    const dy = t.clientY - start.y;
+    // Horizontal swipe only: ignore short moves and mostly-vertical scrolls.
+    if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy) * 1.5) return;
+    const step = dx < 0 ? 1 : -1;
+    setSelected(filtered[(selectedIndex + step + filtered.length) % filtered.length]);
+  };
+
   useEffect(() => {
     if (!selected) return;
     const onKey = (e) => {
@@ -45,7 +64,12 @@ export default function Gallery() {
       }
     };
     window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      window.removeEventListener('keydown', onKey);
+      document.body.style.overflow = prevOverflow;
+    };
   }, [selected, filtered]);
 
   return (
@@ -55,47 +79,62 @@ export default function Gallery() {
       {/* Lightbox */}
       {selected && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-2 sm:p-4 gap-1 sm:gap-4"
-          onClick={() => setSelected(null)}
+          className="fixed inset-0 bg-black bg-opacity-90 z-50 overflow-y-auto"
+          onClick={() => {
+            // Backdrop tap closes only with a mouse. On touch screens a missed
+            // arrow tap used to close the popup; use the X button there.
+            if (window.matchMedia('(pointer: fine)').matches) setSelected(null);
+          }}
+          onTouchStart={onTouchStart}
+          onTouchEnd={onTouchEnd}
         >
           <button
-            onClick={goPrev}
-            className="flex-shrink-0 text-white hover:opacity-70 bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center text-lg"
-            aria-label="Previous artwork"
+            onClick={() => setSelected(null)}
+            className="fixed right-3 top-3 z-[60] text-white text-xl hover:opacity-70 bg-black/60 rounded-full w-11 h-11 flex items-center justify-center"
+            style={{ marginTop: 'env(safe-area-inset-top, 0px)' }}
+            aria-label="Close"
           >
-            ←
+            ✕
           </button>
 
-          <div className="relative max-w-3xl w-full min-w-0" onClick={(e) => e.stopPropagation()}>
-            <button
-              onClick={() => setSelected(null)}
-              className="absolute top-2 right-2 text-white text-2xl hover:opacity-70 bg-black bg-opacity-50 rounded-full w-8 h-8 flex items-center justify-center z-10"
-            >
-              ✕
-            </button>
-            <img
-              src={selected.image}
-              alt={selected.title}
-              className="w-full rounded-2xl object-contain max-h-[65vh] sm:max-h-[75vh]"
-            />
-            <div className="mt-4 text-center text-white">
-              <h3 className="text-lg sm:text-xl font-bold">{selected.title}</h3>
-              <p className="text-gray-400 mt-1 text-sm sm:text-base">{selected.medium}</p>
-              <p className="text-gray-400 text-sm">{selected.size}</p>
-              <p className="text-gray-400 text-sm">{selected.year}</p>
-              <p className="text-xs mt-3" style={{ color: '#666' }}>
-                {selectedIndex + 1} / {filtered.length} &nbsp;·&nbsp; ← → to navigate
-              </p>
+          <div className="min-h-full flex items-center justify-center px-2 py-12 sm:px-4">
+            <div className="w-full max-w-3xl min-w-0 m-auto" onClick={(e) => e.stopPropagation()}>
+              <img
+                src={selected.image}
+                alt={selected.title}
+                className="mx-auto block h-auto w-auto max-w-full rounded-2xl max-h-[calc(100dvh-19rem)]"
+              />
+              <div className="mt-4 text-center text-white">
+                <h3 className="text-lg sm:text-xl font-bold">{selected.title}</h3>
+                <p className="text-gray-400 mt-1 text-sm sm:text-base">{selected.medium}</p>
+                <p className="text-gray-400 text-sm">{selected.size} &nbsp;·&nbsp; {selected.year}</p>
+
+                {/* Prev / next under the details (same on phone and laptop) */}
+                <div className="mt-4 flex items-center justify-center gap-3">
+                  <button
+                    onClick={goPrev}
+                    className="w-16 h-12 rounded-full bg-white/15 text-white text-xl flex items-center justify-center"
+                    aria-label="Previous artwork"
+                  >
+                    ←
+                  </button>
+                  <span className="text-sm min-w-[4.5rem]" style={{ color: '#999' }}>
+                    {selectedIndex + 1} / {filtered.length}
+                  </span>
+                  <button
+                    onClick={goNext}
+                    className="w-16 h-12 rounded-full bg-white/15 text-white text-xl flex items-center justify-center"
+                    aria-label="Next artwork"
+                  >
+                    →
+                  </button>
+                </div>
+                <p className="text-xs mt-2 sm:hidden" style={{ color: '#666' }}>or swipe the painting</p>
+                <p className="text-xs mt-2 hidden sm:block" style={{ color: '#666' }}>or use the ← → keys</p>
+              </div>
             </div>
-          </div>
 
-          <button
-            onClick={goNext}
-            className="flex-shrink-0 text-white hover:opacity-70 bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center text-lg"
-            aria-label="Next artwork"
-          >
-            →
-          </button>
+          </div>
         </div>
       )}
 
