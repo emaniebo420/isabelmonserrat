@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="px-6 py-8 text-center text-sm border-t"
       style={{ borderColor: '#e8e0d5', color: '#6b6b6b' }}>
-      <p className="font-semibold mb-1" style={{ color: '#1a1a1a' }}>Isabel Monserrat ♥</p>
+      <p className="font-semibold mb-1" style={{ color: '#1a1a1a' }}>Isabel Monserrat ♦</p>
       <p>© 2026 Isabel Monserrat. All rights reserved.</p>
       <div className="flex justify-center gap-6 mt-4">
         
