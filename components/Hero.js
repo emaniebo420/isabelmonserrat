@@ -22,7 +22,7 @@ export default function Hero() {
         />
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-[linear-gradient(180deg,rgba(250,247,242,0)_60%,#faf7f2_100%)] lg:bg-[linear-gradient(90deg,#faf7f2_0%,#faf7f2_36%,rgba(250,247,242,0.72)_52%,rgba(250,247,242,0)_78%),linear-gradient(180deg,rgba(250,247,242,0)_78%,rgba(250,247,242,0.9)_100%)]"
+          className="absolute inset-0 bg-[linear-gradient(180deg,rgba(250,247,242,0)_60%,#faf7f2_100%)] lg:bg-[linear-gradient(90deg,#faf7f2_0%,#faf7f2_10%,rgba(250,247,242,0.55)_24%,rgba(250,247,242,0)_44%),linear-gradient(180deg,rgba(250,247,242,0)_90%,rgba(250,247,242,0.7)_100%)]"
         />
       </div>
 
