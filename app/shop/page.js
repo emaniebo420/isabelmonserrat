@@ -61,9 +61,8 @@ export default function Shop() {
       )}
 
       <section className="px-6 pt-12 pb-4 text-center">
-        <p className="text-xs tracking-widest uppercase mb-4" style={{ color: '#c9a84c' }}>Original Works</p>
         <h2 className="text-3xl font-bold mb-2">Shop</h2>
-        <p style={{ color: '#6b6b6b' }}>Acquire an original painting — each piece is one of a kind.</p>
+        <p style={{ color: '#6b6b6b' }}>Acquire an original painting each piece is one of a kind.</p>
         <p className="text-sm mt-2" style={{ color: '#c9a84c' }}>
           {availableCount} of {sorted.length} works available
         </p>
