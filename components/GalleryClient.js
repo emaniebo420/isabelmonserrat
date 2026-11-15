@@ -79,54 +79,81 @@ export default function Gallery() {
       {/* Lightbox */}
       {selected && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-2 sm:p-4 gap-1 sm:gap-4"
-          onClick={() => setSelected(null)}
+          className="fixed inset-0 bg-black bg-opacity-90 z-50 overflow-y-auto"
+          onClick={() => {
+            // Backdrop tap closes only with a mouse. On touch screens a missed
+            // arrow tap used to close the popup; use the X button there.
+            if (window.matchMedia('(pointer: fine)').matches) setSelected(null);
+          }}
           onTouchStart={onTouchStart}
           onTouchEnd={onTouchEnd}
         >
           <button
             onClick={() => setSelected(null)}
-            className="fixed right-3 top-3 z-[60] text-white text-xl hover:opacity-70 bg-black bg-opacity-60 rounded-full w-11 h-11 flex items-center justify-center"
+            className="fixed right-3 top-3 z-[60] text-white text-xl hover:opacity-70 bg-black/60 rounded-full w-11 h-11 flex items-center justify-center"
             style={{ marginTop: 'env(safe-area-inset-top, 0px)' }}
             aria-label="Close"
           >
             ✕
           </button>
 
-          <button
-            onClick={goPrev}
-            className="flex-shrink-0 text-white hover:opacity-70 bg-black bg-opacity-50 rounded-full w-11 h-11 flex items-center justify-center text-lg"
-            aria-label="Previous artwork"
-          >
-            ←
-          </button>
+          <div className="min-h-full flex items-center justify-center px-2 py-14 sm:p-4 gap-4">
+            <button
+              onClick={goPrev}
+              className="hidden sm:flex flex-shrink-0 text-white hover:opacity-70 bg-black bg-opacity-50 rounded-full w-11 h-11 items-center justify-center text-lg"
+              aria-label="Previous artwork"
+            >
+              ←
+            </button>
 
-          <div className="relative max-w-3xl w-full min-w-0" onClick={(e) => e.stopPropagation()}>
-            <img
-              src={selected.image}
-              alt={selected.title}
-              className="w-full rounded-2xl object-contain max-h-[65vh] sm:max-h-[75vh]"
-            />
-            <div className="mt-4 text-center text-white">
-              <h3 className="text-lg sm:text-xl font-bold">{selected.title}</h3>
-              <p className="text-gray-400 mt-1 text-sm sm:text-base">{selected.medium}</p>
-              <p className="text-gray-400 text-sm">{selected.size}</p>
-              <p className="text-gray-400 text-sm">{selected.year}</p>
-              <p className="text-xs mt-3" style={{ color: '#666' }}>
-                {selectedIndex + 1} / {filtered.length} &nbsp;·&nbsp;
-                <span className="sm:hidden">swipe to browse</span>
-                <span className="hidden sm:inline">← → to navigate</span>
-              </p>
+            <div className="w-full max-w-3xl min-w-0 m-auto" onClick={(e) => e.stopPropagation()}>
+              <img
+                src={selected.image}
+                alt={selected.title}
+                className="w-full rounded-2xl object-contain max-h-[68dvh] sm:max-h-[75vh]"
+              />
+              <div className="mt-4 text-center text-white">
+                <h3 className="text-lg sm:text-xl font-bold">{selected.title}</h3>
+                <p className="text-gray-400 mt-1 text-sm sm:text-base">{selected.medium}</p>
+                <p className="text-gray-400 text-sm">{selected.size}</p>
+                <p className="text-gray-400 text-sm">{selected.year}</p>
+
+                {/* Phones: big prev/next buttons under the details */}
+                <div className="mt-4 flex items-center justify-center gap-3 sm:hidden">
+                  <button
+                    onClick={goPrev}
+                    className="w-16 h-12 rounded-full bg-white/15 text-white text-xl flex items-center justify-center"
+                    aria-label="Previous artwork"
+                  >
+                    ←
+                  </button>
+                  <span className="text-sm min-w-[4.5rem]" style={{ color: '#999' }}>
+                    {selectedIndex + 1} / {filtered.length}
+                  </span>
+                  <button
+                    onClick={goNext}
+                    className="w-16 h-12 rounded-full bg-white/15 text-white text-xl flex items-center justify-center"
+                    aria-label="Next artwork"
+                  >
+                    →
+                  </button>
+                </div>
+                <p className="text-xs mt-2 sm:hidden" style={{ color: '#666' }}>or swipe the painting</p>
+
+                <p className="text-xs mt-3 hidden sm:block" style={{ color: '#666' }}>
+                  {selectedIndex + 1} / {filtered.length} &nbsp;·&nbsp; ← → to navigate
+                </p>
+              </div>
             </div>
-          </div>
 
-          <button
-            onClick={goNext}
-            className="flex-shrink-0 text-white hover:opacity-70 bg-black bg-opacity-50 rounded-full w-11 h-11 flex items-center justify-center text-lg"
-            aria-label="Next artwork"
-          >
-            →
-          </button>
+            <button
+              onClick={goNext}
+              className="hidden sm:flex flex-shrink-0 text-white hover:opacity-70 bg-black bg-opacity-50 rounded-full w-11 h-11 items-center justify-center text-lg"
+              aria-label="Next artwork"
+            >
+              →
+            </button>
+          </div>
         </div>
       )}
 
