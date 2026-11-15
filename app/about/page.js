@@ -139,7 +139,7 @@ export default function About() {
                   <p className="font-semibold">Various Group Exhibitions</p>
                   <p className="text-sm" style={{ color: '#6b6b6b' }}>Philippines</p>
                 </div>
-                <p className="text-sm font-medium" style={{ color: '#6b1e2e' }}>2015 — Present</p>
+                <p className="text-sm font-medium" style={{ color: '#6b1e2e' }}>2015 - Present</p>
               </div>
             </div>
           </div>
