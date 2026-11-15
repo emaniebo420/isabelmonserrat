@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FadeIn from '@/components/FadeIn';
+import HeroWall from '@/components/HeroWall';
 
 const SELECTED_PIECES = [
   { id: 2,  title: "Strength",   year: "2024", image: "/images/art2.webp"  },
@@ -42,16 +43,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="hidden lg:flex justify-center">
-              <div className="rounded-2xl overflow-hidden shadow-2xl" style={{ width: '340px', aspectRatio: '3/4' }}>
-                <img
-                  src="/images/art1.webp"
-                  alt="Oasis by Isabel Monserrat"
-                  className="w-full h-full object-cover"
-                  style={{ background: '#faf7f2' }}
-                />
-              </div>
-            </div>
+            <HeroWall />
           </div>
         </FadeIn>
       </section>
