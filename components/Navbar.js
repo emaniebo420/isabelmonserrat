@@ -17,7 +17,7 @@ export default function Navbar({ active }) {
       <div className="flex justify-between items-center">
         <Link href="/" className="text-xl font-bold tracking-tight"
           style={{ color: '#1a1a1a' }}>
-          Isabel Monserrat ♥
+          Isabel Monserrat ♦
         </Link>
 
         {/* Desktop menu */}
