@@ -95,7 +95,7 @@ export default function About() {
                   <a href="https://www.facebook.com/pugadniart/posts/1470766788427433/" target="_blank" rel="noopener noreferrer"
                     className="font-semibold transition hover:opacity-70 underline underline-offset-2"
                     style={{ color: '#6b1e2e' }}>
-                    Pugad ni Art Studio: Mankakait — Friendship
+                    Pugad ni Art Studio: Mankakait (Friendship)
                   </a>
                   <p className="text-sm" style={{ color: '#6b6b6b' }}>Baguio, Philippines</p>
                 </div>
@@ -106,7 +106,7 @@ export default function About() {
                   <a href="https://www.facebook.com/ACCES.organization/posts/pfbid0sM61zynJE2bEqUzj2dSfkRhPxwheBAFBdpCaD1wKuwpb6ceP93c1hktq5YgnmQDbl" target="_blank" rel="noopener noreferrer"
                     className="font-semibold transition hover:opacity-70 underline underline-offset-2"
                     style={{ color: '#6b1e2e' }}>
-                    Art Capital — Let's Flourish
+                    Art Capital: Let's Flourish
                   </a>
                   <p className="text-sm" style={{ color: '#6b6b6b' }}>Grand Palais, Paris, France</p>
                 </div>
@@ -117,7 +117,7 @@ export default function About() {
                   <a href="https://www.facebook.com/ACCES.organization" target="_blank" rel="noopener noreferrer"
                     className="font-semibold transition hover:opacity-70 underline underline-offset-2"
                     style={{ color: '#6b1e2e' }}>
-                    United Nations — Let's Flourish
+                    United Nations: Let's Flourish
                   </a>
                   <p className="text-sm" style={{ color: '#6b6b6b' }}>Vienna, Austria</p>
                 </div>

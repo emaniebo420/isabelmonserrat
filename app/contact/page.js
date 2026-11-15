@@ -53,7 +53,7 @@ export default function Contact() {
         </p>
         <h2 className="text-4xl font-bold text-center mb-4">Get in Touch</h2>
         <p className="text-center mb-16" style={{ color: '#6b6b6b' }}>
-          Whether it's a commission, an inquiry, or just to say hello — Isabel would love to hear from you.
+          Whether it's a commission, an inquiry, or just to say hello, Isabel would love to hear from you.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -159,10 +159,10 @@ export default function Contact() {
                 Commission Info
               </p>
               <div className="space-y-2 text-sm" style={{ color: '#6b6b6b' }}>
-                <p>— Custom portraits & landscapes</p>
-                <p>— Mixed media & oil paintings</p>
-                <p>— Turnaround time varies by size</p>
-                <p>— Ships locally and internationally</p>
+                <p>• Custom portraits & landscapes</p>
+                <p>• Mixed media & oil paintings</p>
+                <p>• Turnaround time varies by size</p>
+                <p>• Ships locally and internationally</p>
               </div>
             </div>
 

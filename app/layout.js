@@ -19,7 +19,7 @@ export const metadata = {
 },
   title: {
     default: "Isabel Monserrat | Filipino-Spanish Artist | Original Paintings",
-    template: "%s — Isabel Monserrat",
+    template: "%s | Isabel Monserrat",
   },
   description: "Original paintings and commissions by Isabel Monserrat, a Filipino-Spanish contemporary artist based in Philippines. Explore her gallery and discover unique, handcrafted artworks.",
   keywords: "Filipino artist, original paintings, paintings, mixed media, oil painting, acrylic painting, art commissions, Philippines, Tagaytay, Metro Manila, Manila, Isabel Monserrat",
@@ -34,7 +34,7 @@ export const metadata = {
         url: "https://isabelmonserrat.com/images/art1.webp",
         width: 800,
         height: 600,
-        alt: "Oasis — Oil on Canvas by Isabel Monserrat",
+        alt: "Oasis, oil on canvas by Isabel Monserrat",
       },
     ],
   },

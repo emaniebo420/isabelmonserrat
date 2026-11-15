@@ -105,7 +105,7 @@ export default function Home() {
           <blockquote className="text-2xl md:text-4xl font-bold italic leading-snug max-w-3xl mx-auto" style={{ color: '#6b1e2e' }}>
             I want my art to be able to heal the soul with themes of mental health awareness, beauty, and nature.
           </blockquote>
-          <p className="mt-6 text-sm tracking-widest uppercase" style={{ color: '#c9a84c' }}>— Isabel Monserrat</p>
+          <p className="mt-6 text-sm tracking-widest uppercase" style={{ color: '#c9a84c' }}>Isabel Monserrat</p>
         </FadeIn>
       </section>
 
@@ -161,7 +161,7 @@ export default function Home() {
                 <a href="https://www.facebook.com/ACCES.organization/posts/pfbid0sM61zynJE2bEqUzj2dSfkRhPxwheBAFBdpCaD1wKuwpb6ceP93c1hktq5YgnmQDbl" target="_blank" rel="noopener noreferrer"
                   className="font-semibold transition hover:opacity-70 underline underline-offset-2"
                   style={{ color: '#c9a84c' }}>
-                  Art Capital — Let's Flourish
+                  Art Capital: Let's Flourish
                 </a>
                 <p className="text-sm" style={{ color: '#6b6b6b' }}>Grand Palais, Paris, France</p>
               </div>
@@ -172,7 +172,7 @@ export default function Home() {
                 <a href="https://www.facebook.com/ACCES.organization/posts/pfbid0sM61zynJE2bEqUzj2dSfkRhPxwheBAFBdpCaD1wKuwpb6ceP93c1hktq5YgnmQDbl" target="_blank" rel="noopener noreferrer"
                   className="font-semibold transition hover:opacity-70 underline underline-offset-2"
                   style={{ color: '#c9a84c' }}>
-                  United Nations — Let's Flourish
+                  United Nations: Let's Flourish
                 </a>
                 <p className="text-sm" style={{ color: '#6b6b6b' }}>Vienna, Austria</p>
               </div>
@@ -198,7 +198,7 @@ export default function Home() {
         <FadeIn>
           <h2 className="text-2xl font-bold mb-3">Commission a Painting</h2>
           <p className="mb-6" style={{ color: '#f9d4da' }}>
-            A piece made just for you — your story, her brushstroke.
+            A piece made just for you: your story, her brushstroke.
           </p>
           <Link href="/contact"
             className="px-8 py-3 rounded-full font-medium transition hover:opacity-90 inline-block"
