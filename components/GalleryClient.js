@@ -97,29 +97,20 @@ export default function Gallery() {
             ✕
           </button>
 
-          <div className="min-h-full flex items-center justify-center px-2 py-14 sm:p-4 gap-4">
-            <button
-              onClick={goPrev}
-              className="hidden sm:flex flex-shrink-0 text-white hover:opacity-70 bg-black bg-opacity-50 rounded-full w-11 h-11 items-center justify-center text-lg"
-              aria-label="Previous artwork"
-            >
-              ←
-            </button>
-
+          <div className="min-h-full flex items-center justify-center px-2 py-12 sm:px-4">
             <div className="w-full max-w-3xl min-w-0 m-auto" onClick={(e) => e.stopPropagation()}>
               <img
                 src={selected.image}
                 alt={selected.title}
-                className="w-full rounded-2xl object-contain max-h-[68dvh] sm:max-h-[75vh]"
+                className="mx-auto block h-auto w-auto max-w-full rounded-2xl max-h-[calc(100dvh-19rem)]"
               />
               <div className="mt-4 text-center text-white">
                 <h3 className="text-lg sm:text-xl font-bold">{selected.title}</h3>
                 <p className="text-gray-400 mt-1 text-sm sm:text-base">{selected.medium}</p>
-                <p className="text-gray-400 text-sm">{selected.size}</p>
-                <p className="text-gray-400 text-sm">{selected.year}</p>
+                <p className="text-gray-400 text-sm">{selected.size} &nbsp;·&nbsp; {selected.year}</p>
 
-                {/* Phones: big prev/next buttons under the details */}
-                <div className="mt-4 flex items-center justify-center gap-3 sm:hidden">
+                {/* Prev / next under the details (same on phone and laptop) */}
+                <div className="mt-4 flex items-center justify-center gap-3">
                   <button
                     onClick={goPrev}
                     className="w-16 h-12 rounded-full bg-white/15 text-white text-xl flex items-center justify-center"
@@ -139,20 +130,10 @@ export default function Gallery() {
                   </button>
                 </div>
                 <p className="text-xs mt-2 sm:hidden" style={{ color: '#666' }}>or swipe the painting</p>
-
-                <p className="text-xs mt-3 hidden sm:block" style={{ color: '#666' }}>
-                  {selectedIndex + 1} / {filtered.length} &nbsp;·&nbsp; ← → to navigate
-                </p>
+                <p className="text-xs mt-2 hidden sm:block" style={{ color: '#666' }}>or use the ← → keys</p>
               </div>
             </div>
 
-            <button
-              onClick={goNext}
-              className="hidden sm:flex flex-shrink-0 text-white hover:opacity-70 bg-black bg-opacity-50 rounded-full w-11 h-11 items-center justify-center text-lg"
-              aria-label="Next artwork"
-            >
-              →
-            </button>
           </div>
         </div>
       )}
