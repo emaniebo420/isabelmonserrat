@@ -71,10 +71,10 @@ export default function Hero() {
             {/* Framed works overlapping the backdrop (laptops) */}
             <div className={`${FRAME} hidden lg:block lg:bottom-[8%] lg:left-[53.7%] lg:w-[16.2cqw] lg:-rotate-2`}>
               <Image
-                src="/images/art13.webp"
-                alt="Forbidden Fruit by Isabel Monserrat"
+                src="/images/art17.webp"
+                alt="2 of diamonds by Isabel Monserrat"
                 width={1200}
-                height={1575}
+                height={1699}
                 sizes="(min-width: 1280px) 210px, 16vw"
                 className="block h-auto w-full"
               />
