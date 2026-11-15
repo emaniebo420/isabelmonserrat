@@ -71,7 +71,7 @@ export default function Home() {
               </div>
               <p className="text-xs tracking-widest uppercase mb-3" style={{ color: '#c9a84c' }}>Authentic</p>
               <p className="font-semibold mb-1">100% Original</p>
-              <p className="text-sm" style={{ color: '#6b6b6b' }}>Every piece is one of a kind — no prints, no reproductions.</p>
+              <p className="text-sm" style={{ color: '#6b6b6b' }}>Every piece is one of a kind no prints, no reproductions.</p>
             </div>
           </FadeIn>
           <FadeIn>
