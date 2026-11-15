@@ -1,5 +1,5 @@
 'use client';
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useRef } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import artworks from '@/data/artworks';
@@ -10,6 +10,7 @@ const FILTERS = ['All', 'Available', 'Sold'];
 export default function Gallery() {
   const [selected, setSelected] = useState(null);
   const [filter, setFilter] = useState('All');
+  const touchStart = useRef(null);
 
   const filtered = useMemo(() => artworks.filter((art) => {
     if (filter === 'Available') return art.available;
@@ -31,6 +32,24 @@ export default function Gallery() {
     setSelected(filtered[(selectedIndex + 1) % filtered.length]);
   };
 
+  const onTouchStart = (e) => {
+    const t = e.touches[0];
+    touchStart.current = { x: t.clientX, y: t.clientY };
+  };
+
+  const onTouchEnd = (e) => {
+    const start = touchStart.current;
+    touchStart.current = null;
+    if (!start || selectedIndex < 0 || filtered.length < 2) return;
+    const t = e.changedTouches[0];
+    const dx = t.clientX - start.x;
+    const dy = t.clientY - start.y;
+    // Horizontal swipe only: ignore short moves and mostly-vertical scrolls.
+    if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy) * 1.5) return;
+    const step = dx < 0 ? 1 : -1;
+    setSelected(filtered[(selectedIndex + step + filtered.length) % filtered.length]);
+  };
+
   useEffect(() => {
     if (!selected) return;
     const onKey = (e) => {
@@ -45,7 +64,12 @@ export default function Gallery() {
       }
     };
     window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      window.removeEventListener('keydown', onKey);
+      document.body.style.overflow = prevOverflow;
+    };
   }, [selected, filtered]);
 
   return (
@@ -57,22 +81,27 @@ export default function Gallery() {
         <div
           className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-2 sm:p-4 gap-1 sm:gap-4"
           onClick={() => setSelected(null)}
+          onTouchStart={onTouchStart}
+          onTouchEnd={onTouchEnd}
         >
           <button
+            onClick={() => setSelected(null)}
+            className="fixed right-3 top-3 z-[60] text-white text-xl hover:opacity-70 bg-black bg-opacity-60 rounded-full w-11 h-11 flex items-center justify-center"
+            style={{ marginTop: 'env(safe-area-inset-top, 0px)' }}
+            aria-label="Close"
+          >
+            ✕
+          </button>
+
+          <button
             onClick={goPrev}
-            className="flex-shrink-0 text-white hover:opacity-70 bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center text-lg"
+            className="flex-shrink-0 text-white hover:opacity-70 bg-black bg-opacity-50 rounded-full w-11 h-11 flex items-center justify-center text-lg"
             aria-label="Previous artwork"
           >
             ←
           </button>
 
           <div className="relative max-w-3xl w-full min-w-0" onClick={(e) => e.stopPropagation()}>
-            <button
-              onClick={() => setSelected(null)}
-              className="absolute top-2 right-2 text-white text-2xl hover:opacity-70 bg-black bg-opacity-50 rounded-full w-8 h-8 flex items-center justify-center z-10"
-            >
-              ✕
-            </button>
             <img
               src={selected.image}
               alt={selected.title}
@@ -84,14 +113,16 @@ export default function Gallery() {
               <p className="text-gray-400 text-sm">{selected.size}</p>
               <p className="text-gray-400 text-sm">{selected.year}</p>
               <p className="text-xs mt-3" style={{ color: '#666' }}>
-                {selectedIndex + 1} / {filtered.length} &nbsp;·&nbsp; ← → to navigate
+                {selectedIndex + 1} / {filtered.length} &nbsp;·&nbsp;
+                <span className="sm:hidden">swipe to browse</span>
+                <span className="hidden sm:inline">← → to navigate</span>
               </p>
             </div>
           </div>
 
           <button
             onClick={goNext}
-            className="flex-shrink-0 text-white hover:opacity-70 bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center text-lg"
+            className="flex-shrink-0 text-white hover:opacity-70 bg-black bg-opacity-50 rounded-full w-11 h-11 flex items-center justify-center text-lg"
             aria-label="Next artwork"
           >
             →
