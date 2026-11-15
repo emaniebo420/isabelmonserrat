@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FadeIn from '@/components/FadeIn';
-import HeroWall from '@/components/HeroWall';
+import Hero from '@/components/Hero';
 
 const SELECTED_PIECES = [
   { id: 2,  title: "Strength",   year: "2024", image: "/images/art2.webp"  },
@@ -15,38 +15,7 @@ export default function Home() {
     <main className="min-h-screen" style={{ background: '#faf7f2' }}>
       <Navbar active="home" />
 
-      {/* Hero — two column */}
-      <section className="px-6 py-20 md:py-0 md:min-h-[90vh] flex items-center" style={{ background: '#faf7f2' }}>
-        <FadeIn className="w-full">
-          <div className="max-w-5xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-xs font-medium tracking-widest uppercase mb-4" style={{ color: '#c9a84c' }}>
-                Original Art by Isabel Monserrat
-              </p>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight" style={{ color: '#1a1a1a' }}>
-                Art That Speaks<br />to the Soul
-              </h1>
-              <p className="text-base md:text-lg mb-10" style={{ color: '#6b6b6b' }}>
-                Original paintings and commissions by a Filipino-Spanish artist rooted in femininity, nature, and healing.
-              </p>
-              <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center">
-                <Link href="/gallery"
-                  className="w-full sm:w-auto px-8 py-4 rounded-full text-base font-medium text-white transition hover:opacity-90 text-center"
-                  style={{ background: '#6b1e2e' }}>
-                  View Gallery
-                </Link>
-                <Link href="/shop"
-                  className="w-full sm:w-auto px-8 py-4 rounded-full text-base font-medium transition hover:opacity-90 text-center"
-                  style={{ border: '2px solid #6b1e2e', color: '#6b1e2e' }}>
-                  Shop Now
-                </Link>
-              </div>
-            </div>
-
-            <HeroWall />
-          </div>
-        </FadeIn>
-      </section>
+      <Hero />
 
       {/* Features */}
       <section className="px-6 py-16 bg-white">
