@@ -90,15 +90,6 @@ const artworks = [
     available: true,
   },
   {
-    id: 11,
-    title: "The Star",
-    year: "2024",
-    medium: "Mixed Media on Canvas (Acrylic paint, Acrylic markers, Oil paint, Modeling paste, Plastic texture, Flat beads, Spray paint)",
-    size: "28 x 40 inches",
-    image: "/images/art11.webp",
-    available: true,
-  },
-  {
     id: 12,
     title: "Tres Marias",
     year: "2022",
