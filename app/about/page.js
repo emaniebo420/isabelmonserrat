@@ -28,7 +28,7 @@ export default function About() {
         {/* Pull Quote */}
         <div className="mb-10 border-l-4 pl-6 py-1" style={{ borderColor: '#c9a84c' }}>
           <p className="text-xl italic leading-relaxed" style={{ color: '#6b1e2e' }}>
-            "I want my art to be able to heal the soul with themes of mental health awareness, beauty, and nature."
+            "I find beauty in the messy, fragile, and imperfect parts of life, and I try to bring those feelings into my work."
           </p>
         </div>
 
