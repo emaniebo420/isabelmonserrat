@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Playfair_Display, Inter, Dancing_Script } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 
 const playfair = Playfair_Display({
@@ -10,6 +10,12 @@ const playfair = Playfair_Display({
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+});
+
+const script = Dancing_Script({
+  subsets: ["latin"],
+  weight: "600",
+  variable: "--font-script",
 });
 
 export const metadata = {
@@ -42,7 +48,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
+    <html lang="en" className={`${playfair.variable} ${inter.variable} ${script.variable}`}>
       <body className="min-h-full flex flex-col font-inter" style={{ animation: 'fadeIn 0.7s ease' }}>
         {children}
         <Analytics />

@@ -15,9 +15,11 @@ export default function Navbar({ active }) {
   return (
     <nav className="px-6 py-4 bg-white shadow-sm sticky top-0 z-50">
       <div className="flex justify-between items-center">
-        <Link href="/" className="text-xl font-bold tracking-tight"
-          style={{ color: '#1a1a1a' }}>
-          Isabel Monserrat ♦
+        <Link href="/" className="whitespace-nowrap" style={{ color: '#1a1a1a' }}>
+          <span className="text-[27px] leading-none" style={{ fontFamily: 'var(--font-script), cursive', fontWeight: 600 }}>
+            Isabel Monserrat
+          </span>{' '}
+          <span className="text-base">♦</span>
         </Link>
 
         {/* Desktop menu */}
