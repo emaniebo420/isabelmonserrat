@@ -72,7 +72,7 @@ export default function Home() {
             <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
           </svg>
           <blockquote className="text-2xl md:text-4xl font-bold italic leading-snug max-w-3xl mx-auto" style={{ color: '#6b1e2e' }}>
-            I want my art to be able to heal the soul with themes of mental health awareness, beauty, and nature.
+            There's always something beautiful hiding in the ordinary.
           </blockquote>
           <p className="mt-6 text-sm tracking-widest uppercase" style={{ color: '#c9a84c' }}>Isabel Monserrat</p>
         </FadeIn>
