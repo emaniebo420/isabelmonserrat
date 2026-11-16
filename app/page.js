@@ -17,54 +17,6 @@ export default function Home() {
 
       <Hero />
 
-      {/* Features */}
-      <section className="px-6 py-16 bg-white">
-        <FadeIn>
-          <h2 className="text-2xl font-bold text-center mb-10">Why collectors love Isabel's work</h2>
-        </FadeIn>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
-          <FadeIn>
-            <div className="text-center p-6 rounded-2xl border" style={{ background: '#faf7f2', borderColor: '#e8e0d5' }}>
-              <div className="flex justify-center mb-4">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                </svg>
-              </div>
-              <p className="text-xs tracking-widest uppercase mb-3" style={{ color: '#c9a84c' }}>Authentic</p>
-              <p className="font-semibold mb-1">100% Original</p>
-              <p className="text-sm" style={{ color: '#6b6b6b' }}>Every piece is one of a kind no prints, no reproductions.</p>
-            </div>
-          </FadeIn>
-          <FadeIn>
-            <div className="text-center p-6 rounded-2xl border" style={{ background: '#faf7f2', borderColor: '#e8e0d5' }}>
-              <div className="flex justify-center mb-4">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="10"/>
-                  <line x1="2" y1="12" x2="22" y2="12"/>
-                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                </svg>
-              </div>
-              <p className="text-xs tracking-widest uppercase mb-3" style={{ color: '#c9a84c' }}>Worldwide</p>
-              <p className="font-semibold mb-1">Ships Internationally</p>
-              <p className="text-sm" style={{ color: '#6b6b6b' }}>Carefully packed and delivered worldwide.</p>
-            </div>
-          </FadeIn>
-          <FadeIn>
-            <div className="text-center p-6 rounded-2xl border" style={{ background: '#faf7f2', borderColor: '#e8e0d5' }}>
-              <div className="flex justify-center mb-4">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 20h9"/>
-                  <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
-                </svg>
-              </div>
-              <p className="text-xs tracking-widest uppercase mb-3" style={{ color: '#c9a84c' }}>Bespoke</p>
-              <p className="font-semibold mb-1">Custom Commissions</p>
-              <p className="text-sm" style={{ color: '#6b6b6b' }}>Your vision brought to life through her brushstroke.</p>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
       {/* Artist Quote */}
       <section className="px-6 py-20 text-center" style={{ background: '#f0e8dc' }}>
         <FadeIn>
