@@ -1,5 +1,14 @@
 // app/sitemap.js
+import artworks from '@/data/artworks';
+
 export default function sitemap() {
+  const paintings = artworks.map((a) => ({
+    url: `https://isabelmonserrat.com/gallery/${a.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.6,
+  }));
+
   return [
     {
       url: 'https://isabelmonserrat.com',
@@ -31,5 +40,6 @@ export default function sitemap() {
       changeFrequency: 'yearly',
       priority: 0.6,
     },
+    ...paintings,
   ];
 }

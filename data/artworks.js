@@ -292,10 +292,23 @@ const artworks = [
   // },
 ];
 
+// "Me, Myself, & I" -> "me-myself-and-i". Used for each painting's own page.
+const slugify = (title) =>
+  title
+    .toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/['’]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+
 // Newest year first; works from the same year keep newest-added first.
 // Each work also gets a small `thumb` for grids; `image` stays the full size for the popup.
 const sorted = [...artworks]
   .sort((a, b) => Number(b.year) - Number(a.year) || b.id - a.id)
-  .map((a) => ({ ...a, thumb: a.image.replace('/images/', '/images/thumbs/') }));
+  .map((a) => ({
+    ...a,
+    thumb: a.image.replace('/images/', '/images/thumbs/'),
+    slug: slugify(a.title),
+  }));
 
 export default sorted;
