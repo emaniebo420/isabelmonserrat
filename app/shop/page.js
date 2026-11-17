@@ -78,8 +78,10 @@ export default function Shop() {
             >
               <div className="w-full bg-gray-50 relative overflow-hidden" style={{ aspectRatio: '3/4' }}>
                 <img
-                  src={product.image}
+                  src={product.thumb}
                   alt={product.title}
+                  loading="lazy"
+                  decoding="async"
                   className="absolute inset-0 w-full h-full object-contain"
                 />
                 {/* Hover overlay */}
