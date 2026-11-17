@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import { useState, useMemo, useEffect, useRef } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -108,6 +109,9 @@ export default function Gallery() {
                 <h3 className="text-lg sm:text-xl font-bold">{selected.title}</h3>
                 <p className="text-gray-400 mt-1 text-sm sm:text-base">{selected.medium}</p>
                 <p className="text-gray-400 text-sm">{selected.size} &nbsp;·&nbsp; {selected.year}</p>
+                <Link href={`/gallery/${selected.slug}`} className="mt-2 inline-block text-sm underline" style={{ color: '#c9a84c' }}>
+                  Open this painting&apos;s page
+                </Link>
 
                 {/* Prev / next under the details (same on phone and laptop) */}
                 <div className="mt-4 flex items-center justify-center gap-3">
