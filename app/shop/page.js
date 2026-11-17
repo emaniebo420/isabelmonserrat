@@ -47,7 +47,7 @@ export default function Shop() {
               <p className="text-gray-400 text-sm">{selected.year}</p>
               {selected.available ? (
                 <button
-                  onClick={() => router.push('/contact')}
+                  onClick={() => router.push(`/contact?piece=${selected.id}`)}
                   className="mt-4 inline-block px-8 py-3 rounded-full font-medium transition hover:opacity-90"
                   style={{ background: '#c9a84c', color: '#1a1a1a' }}>
                   Inquire About This Piece
@@ -107,7 +107,7 @@ export default function Shop() {
                 <div className="mt-auto pt-3">
                   {product.available ? (
                     <button
-                      onClick={(e) => { e.stopPropagation(); router.push('/contact'); }}
+                      onClick={(e) => { e.stopPropagation(); router.push(`/contact?piece=${product.id}`); }}
                       className="w-full text-white py-2 rounded-full transition hover:opacity-90 font-medium text-sm"
                       style={{ background: '#6b1e2e' }}>
                       Inquire
