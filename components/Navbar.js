@@ -18,8 +18,7 @@ export default function Navbar({ active }) {
         <Link href="/" className="whitespace-nowrap" style={{ color: '#1a1a1a' }}>
           <span className="text-[27px] leading-none" style={{ fontFamily: 'var(--font-script), cursive', fontWeight: 600 }}>
             Isabel Monserrat
-          </span>{' '}
-          <span className="text-base">♦</span>
+          </span>
         </Link>
 
         {/* Desktop menu */}
