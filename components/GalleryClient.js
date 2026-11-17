@@ -176,8 +176,10 @@ export default function Gallery() {
               >
                 <div className="w-full bg-gray-50 relative overflow-hidden" style={{ aspectRatio: '3/4' }}>
                   <img
-                    src={art.image}
+                    src={art.thumb}
                     alt={art.title}
+                    loading="lazy"
+                    decoding="async"
                     className="absolute inset-0 w-full h-full object-contain"
                   />
                   {/* Hover overlay */}

@@ -293,8 +293,9 @@ const artworks = [
 ];
 
 // Newest year first; works from the same year keep newest-added first.
-const sorted = [...artworks].sort(
-  (a, b) => Number(b.year) - Number(a.year) || b.id - a.id
-);
+// Each work also gets a small `thumb` for grids; `image` stays the full size for the popup.
+const sorted = [...artworks]
+  .sort((a, b) => Number(b.year) - Number(a.year) || b.id - a.id)
+  .map((a) => ({ ...a, thumb: a.image.replace('/images/', '/images/thumbs/') }));
 
 export default sorted;

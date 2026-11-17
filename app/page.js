@@ -42,8 +42,10 @@ export default function Home() {
               <Link href="/gallery" key={art.id} className="group block rounded-2xl overflow-hidden shadow-md">
                 <div className="relative overflow-hidden" style={{ aspectRatio: '3/4' }}>
                   <img
-                    src={art.image}
+                    src={art.image.replace('/images/', '/images/thumbs/')}
                     alt={art.title}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     style={{ background: '#faf7f2' }}
                   />
