@@ -1,11 +1,24 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import artworks from '@/data/artworks';
 
 export default function Contact() {
   const [status, setStatus] = useState('');
   const [loading, setLoading] = useState(false);
+  const [piece, setPiece] = useState(null);
+  const [subject, setSubject] = useState('');
+
+  // /contact?piece=<id> comes from an "Inquire" button; look the work up in our own data.
+  useEffect(() => {
+    const id = Number(new URLSearchParams(window.location.search).get('piece'));
+    const found = Number.isInteger(id) ? artworks.find((a) => a.id === id) : null;
+    if (found) {
+      setPiece(found);
+      setSubject('Artwork Inquiry');
+    }
+  }, []);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -15,8 +28,10 @@ export default function Contact() {
     const data = {
       from_name: form.name.value,
       from_email: form.email.value,
-      subject: form.subject.value,
-      message: form.message.value,
+      subject: piece ? `${form.subject.value}: ${piece.title}` : form.subject.value,
+      message: piece
+        ? `Inquiring about: ${piece.title} (${piece.size.trim()}, ${piece.year})\n\n${form.message.value}`
+        : form.message.value,
     };
 
     try {
@@ -34,6 +49,7 @@ export default function Contact() {
       if (res.ok) {
         setStatus('success');
         form.reset();
+        setSubject(piece ? 'Artwork Inquiry' : '');
       } else {
         setStatus('error');
       }
@@ -74,6 +90,20 @@ export default function Contact() {
             )}
 
             <form onSubmit={handleSubmit} className="space-y-5">
+              {piece && (
+                <div className="flex items-center gap-3 rounded-xl border bg-white p-3" style={{ borderColor: '#e8e0d5' }}>
+                  <img src={piece.thumb} alt={piece.title} className="h-16 w-12 rounded-md object-cover" />
+                  <div className="min-w-0 flex-1 text-sm">
+                    <p className="text-[10px] uppercase tracking-widest" style={{ color: '#c9a84c' }}>Inquiring about</p>
+                    <p className="font-semibold truncate">{piece.title}</p>
+                    <p className="text-xs" style={{ color: '#6b6b6b' }}>{piece.size.trim()} &nbsp;·&nbsp; {piece.year}</p>
+                  </div>
+                  <button type="button" onClick={() => setPiece(null)}
+                    className="text-xs underline" style={{ color: '#6b6b6b' }}>
+                    Remove
+                  </button>
+                </div>
+              )}
               <div>
                 <label className="block text-sm font-medium mb-2" style={{ color: '#4a4a4a' }}>Name</label>
                 <input name="name" type="text" placeholder="Your name" required
@@ -88,7 +118,7 @@ export default function Contact() {
               </div>
               <div>
                 <label className="block text-sm font-medium mb-2" style={{ color: '#4a4a4a' }}>Subject</label>
-                <select name="subject" required
+                <select name="subject" required value={subject} onChange={(e) => setSubject(e.target.value)}
                   className="w-full border rounded-xl px-4 py-3 focus:outline-none bg-white text-sm"
                   style={{ borderColor: '#e8e0d5', color: '#4a4a4a' }}>
                   <option value="">Select a subject</option>
