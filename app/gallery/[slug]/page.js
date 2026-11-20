@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CopyLinkButton from '@/components/CopyLinkButton';
+import WorkImg from '@/components/WorkImg';
 import artworks from '@/data/artworks';
 
 const SITE = 'https://isabelmonserrat.com';
@@ -68,10 +69,12 @@ export default async function PaintingPage({ params }) {
         </Link>
 
         <div className="mt-6 grid grid-cols-1 gap-10 md:grid-cols-2 md:items-start">
-          <img
+          <WorkImg
             src={art.image}
+            wmSrc={art.wm}
             alt={art.title}
             fetchPriority="high"
+            wrapperClassName="mx-auto block w-fit max-w-full"
             className="mx-auto block h-auto w-auto max-w-full rounded-2xl md:max-h-[80vh]"
             style={{ boxShadow: '0 18px 40px rgba(50,30,35,0.22)' }}
           />

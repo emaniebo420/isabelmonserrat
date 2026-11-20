@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import artworks from '@/data/artworks';
 import BackToTop from '@/components/BackToTop';
+import WorkImg from '@/components/WorkImg';
 
 export default function Shop() {
   const sorted = [...artworks].sort((a, b) => Number(b.available) - Number(a.available));
@@ -35,9 +36,12 @@ export default function Shop() {
             >
               ✕
             </button>
-            <img
+            <WorkImg
+              key={selected.id}
               src={selected.image}
+              wmSrc={selected.wm}
               alt={selected.title}
+              wrapperClassName="block w-full"
               className="w-full rounded-2xl object-contain max-h-[75vh]"
             />
             <div className="mt-4 text-center text-white">
