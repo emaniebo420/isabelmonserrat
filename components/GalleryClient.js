@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import artworks from '@/data/artworks';
 import BackToTop from '@/components/BackToTop';
+import WorkImg from '@/components/WorkImg';
 
 const FILTERS = ['All', 'Available', 'Sold'];
 
@@ -100,9 +101,12 @@ export default function Gallery() {
 
           <div className="min-h-full flex items-center justify-center px-2 py-12 sm:px-4">
             <div className="w-full max-w-3xl min-w-0 m-auto" onClick={(e) => e.stopPropagation()}>
-              <img
+              <WorkImg
+                key={selected.id}
                 src={selected.image}
+                wmSrc={selected.wm}
                 alt={selected.title}
+                wrapperClassName="mx-auto block w-fit max-w-full"
                 className="mx-auto block h-auto w-auto max-w-full rounded-2xl max-h-[calc(100dvh-19rem)]"
               />
               <div className="mt-4 text-center text-white">

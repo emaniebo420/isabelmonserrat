@@ -309,6 +309,8 @@ const sorted = [...artworks]
     ...a,
     thumb: a.image.replace('/images/', '/images/thumbs/'),
     slug: slugify(a.title),
+    // watermarked copy, laid invisibly over the full-size image by WorkImg
+    wm: a.image.replace('/images/', '/images/wm/'),
   }));
 
 export default sorted;
